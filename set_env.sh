@@ -9,3 +9,5 @@ export AWS_REGION=us-east-1
 export AWS_PROFILE=default
 export JWT_SECRET=testing
 export URL=http://localhsot:5432
+export DOCKER_USERNAME=hothanhnhank1c
+export DOCKER_PASSWORD=hothanhnhank1c
