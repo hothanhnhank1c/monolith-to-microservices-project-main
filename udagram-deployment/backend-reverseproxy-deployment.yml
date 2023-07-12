@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: backend-reverseproxy	
-        image: hothanhnhank1c/reverseproxy:v3
+        image: hothanhnhank1c/reverseproxy:v4
         resources:
           limits:
             memory: 256Mi
