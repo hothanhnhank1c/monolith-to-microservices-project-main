@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: load-balancer-example
+  name: udagram-frontend
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: load-balancer-example
+  template:
+    metadata:
+      labels:
+        app: load-balancer-example
+    spec:
+      containers:
+      - image: hothanhnhank1c/udagram-frontend:v8
+        name: udagram-frontend
+        resources:
+          limits:
+            memory: 1024Mi
+            cpu: "1"
+          requests:
+            memory: 1024Mi
+            cpu: "0.2"
+        ports:
+        - containerPort: 8100

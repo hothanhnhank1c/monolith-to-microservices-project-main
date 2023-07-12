@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: env-configmap
+  labels:
+    app: my-app
+data:
+  POSTGRES_HOST: cdr-1.ct6hw0wplhhc.us-east-1.rds.amazonaws.com
+  POSTGRES_DB: postgres
+  AWS_BUCKET: arn:aws:s3:::nhanht18
+  AWS_REGION: us-east-1
+  AWS_PROFILE: test
+  JWT_SECRET: testing
+  URL: http://localhost:8100
+  config: |
+    address-pools:
+      - name: default
+        protocol: layer2

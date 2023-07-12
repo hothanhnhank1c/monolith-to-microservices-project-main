@@ -11,3 +11,14 @@ export JWT_SECRET=testing
 export URL=http://localhsot:5432
 export DOCKER_USERNAME=hothanhnhank1c
 export DOCKER_PASSWORD=hothanhnhank1c
+
+kubectl apply -f env-secret.yaml
+kubectl apply -f aws-secret.yaml
+kubectl apply -f env-configmap.yaml
+kubectl apply -f backend-user-deployment.yaml
+kubectl apply -f backend-feed-deployment.yaml
+kubectl apply -f backend-reverseproxy-deployment.yml
+kubectl apply -f backend-feed-service.yaml
+kubectl apply -f backend-user-service.yaml
+kubectl apply -f backend-reverseproxy-service.yaml
+kubectl apply -f udagram-frontend-service.yml
