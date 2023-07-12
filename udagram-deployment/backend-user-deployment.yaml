@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: backend-user
-          image: hothanhnhank1c/udagram-api-user:v8
+          image: hothanhnhank1c/udagram-api-user:v3
           imagePullPolicy: Always  
           resources:
             requests:

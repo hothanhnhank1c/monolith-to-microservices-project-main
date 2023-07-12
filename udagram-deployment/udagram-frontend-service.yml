@@ -15,7 +15,7 @@ spec:
         app: load-balancer-example
     spec:
       containers:
-      - image: hothanhnhank1c/udagram-frontend:v8
+      - image: hothanhnhank1c/udagram-frontend:v3
         name: udagram-frontend
         resources:
           limits:
