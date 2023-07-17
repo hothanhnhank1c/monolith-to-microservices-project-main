@@ -11,12 +11,12 @@ docker push hothanhnhank1c/udagram-frontend:v4
 kubectl autoscale deployment backend-feed --cpu-percent=50 --min=1 --max=2
 kubectl autoscale deployment backend-reverseproxy --cpu-percent=80 --min=1 --max=2
 kubectl autoscale deployment backend-feed --cpu-percent=80 --min=2 --max=3
-eksctl create cluster --name myClusterPj3 --region=us-east-2 --nodes-min=2 --nodes-max=3
-aws eks update-kubeconfig --name myClusterPj3 --region us-east-2 
+eksctl create cluster --name myCluster --region=us-east-1 --nodes-min=2 --nodes-max=3
+aws eks update-kubeconfig --name myCluster --region us-east-1
 kubectl version
 kubectl get nodes
 
-eksctl utils describe-stacks --region=us-east-2 --cluster=myClusterPj3
+eksctl utils describe-stacks --region=us-east-1 --cluster=myCluster
 
 # Kubernetes pods are deployed properly
 kubectl get pods 
